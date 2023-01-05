@@ -1,13 +1,204 @@
-body {
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button {
+  all: unset;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  background-color: cornflowerblue;
+  color: white;
+  transition: all 350ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
+}
+
+.button.borderless {
+  background-color: unset;
+  color: cornflowerblue;
+}
+
+.button.borderless:hover {
+  box-shadow: unset;
+}
+
+.Page {
+  margin: auto;
+  max-width: 95%;
+  width: 1024px;
+}
+
+.PageHeader {
+  display: flex;
+  align-items: center;
+}
+
+.PageHeaderTitle {
+  width: 100%;
+}
+
+.PageHeaderAction {
+  width: 16.5rem;
+  text-align: right;
+}
+
+.Backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.DialogWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dialog {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2rem 1rem;
+  max-width: 95%;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 9px -5px rgba(0,0,0,0.75);
+}
+
+.DialogHeader {
+  position: relative;
+  padding-bottom: 1rem;
+  text-align: right;
+}
+
+.DialogClose {
+  position: absolute;
+  right: 0;
+  top: -1.25rem;
+  font-size: 1.5rem;
+}
+
+.DialogClose:hover {
+  cursor: pointer;
+}
+
+.MovieCard {
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.MovieCardBody {
+  padding: 1rem;
+}
+
+.MovieCardBody h3 {
+  all: unset;
+  font-size: 1.35rem;
+}
+
+.MovieCardSubtitle {
+  font-weight: 100;
+  font-size: .9rem;
+}
+
+.MovieCardImage {
+}
+
+.MovieCardImage img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.MovieList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.MovieListCard {
+  width: 100%;
+}
+
+.MovieListCard {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 560px) {
+  .MovieListCard {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 800px) {
+  .MovieListCard {
+    width: calc(33.3333% - 2rem);
+  }
+}
+
+.EmptyIndicator {
+  padding: 2rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.EmptyIndicator div + div {
+  margin-top: 1rem;
+}
+
+.MovieForm {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: .5rem .75rem;
+  width: 100%;
+}
+
+.FormControl + .FormControl {
+  margin-top: 1rem;
+}
+
+.MovieFormFooter {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.MovieFormFooter .button + .button {
+  margin-left: 1rem;
+}
+
+.error {
+  margin-top: .5rem;
+  color: red;
+  font-size: .9rem;
+}
+
+.error-input {
+  border-color: red;
 }
